@@ -11,5 +11,9 @@ namespace DemoApp
     {
         public static DispatcherTimer timer = new DispatcherTimer();
         public static int counter { get; set; }
+        public static void UpdateCount()
+        {
+            counter++;
+        }
     }
 }

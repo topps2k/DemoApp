@@ -13,6 +13,19 @@ namespace DemoApp
     /// </summary>
     public partial class App : Application
     {
-        
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            InitTimer();
+        }
+        public void InitTimer()
+        {
+            TimerClass.timer.Tick += Timer_Tick;
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            TimerClass.UpdateCount();
+        }
     }
+    
 }

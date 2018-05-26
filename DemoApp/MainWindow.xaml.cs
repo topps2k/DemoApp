@@ -31,7 +31,8 @@ namespace DemoApp
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            Test.Content = TimerClass.counter++;
+            Test.Content = TimerClass.counter;
+            //TimerClass.UpdateCount();
         }
 
 
